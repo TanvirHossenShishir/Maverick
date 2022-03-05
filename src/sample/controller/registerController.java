@@ -30,6 +30,8 @@ public class registerController {
         scene.getStylesheets().add(css);
         stage.setScene(scene);
         stage.show();
+        stage.setMinWidth(stage.getWidth());
+        stage.setMinHeight(stage.getHeight());
     }
 
     public void switchTextField() throws IOException{

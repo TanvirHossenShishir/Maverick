@@ -11,20 +11,22 @@ import javafx.stage.StageStyle;
 public class Main extends Application {
 
     @Override
-    public void start(Stage stage) throws Exception{
+    public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("view/login.fxml"));
         //Image icon = new Image("../image/logo3.png");
         //stage.getIcons().add(icon);
-        stage.setTitle("MAVERICK");
+        primaryStage.setTitle("MAVERICK");
         Scene scene = new Scene(root);
 
         String css = this.getClass().getResource("css/login.css").toExternalForm();
         scene.getStylesheets().add(css);
 
-        stage.setScene(scene);
+        primaryStage.setScene(scene);
         //stage.setResizable(false);
         //stage.initStyle(StageStyle.UNDECORATED);
-        stage.show();
+        primaryStage.show();
+        primaryStage.setMinWidth(primaryStage.getWidth());
+        primaryStage.setMinHeight(primaryStage.getHeight());
     }
 
 
