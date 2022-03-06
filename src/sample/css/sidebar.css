@@ -1,28 +1,38 @@
 .button{
-    -fx-background-color: #00897B;
+    -fx-background-color: #134b5f;
     -fx-background-radius: 0;
     -fx-content-display: left;
     -fx-padding: 0px 0px;
 }
 
 .button:hover{
-    -fx-background-color: #00796B;
+    -fx-background-color: #165a72;
 }
 
 .button:pressed{
-    -fx-background-color: #00695C;
+    -fx-background-color: #1e7898;
+}
+
+.button:focused{
+    -fx-background-color: #1e7898;
 }
 
 .toggle-button {
-    -fx-background-color: #00897B;
+    -fx-background-color: #134b5f;
     -fx-background-radius: 0;
     -fx-padding: 0px 0px;
 }
 
 .toggle-button:selected {
-    -fx-background-color: #00695C;
+    -fx-background-color: #1e7898;
+    -fx-border-width: 0 0 0 3;
+    -fx-border-color: #f2c811;
 }
 
 .toggle-button:selected:focused {
-    -fx-background-color: #00695C;
+    -fx-background-color: #1e7898;
+}
+
+.sidebar-background{
+    -fx-background-color: #134b5f;
 }

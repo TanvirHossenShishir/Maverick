@@ -2,6 +2,8 @@ package sample.controller;
 
 import javafx.animation.FadeTransition;
 import javafx.animation.TranslateTransition;
+import javafx.beans.property.DoubleProperty;
+import javafx.beans.property.SimpleDoubleProperty;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -16,6 +18,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -37,7 +40,7 @@ public class sidebarController implements Initializable {
     @FXML
     private AnchorPane anchorPane, anchorPane2, anchorPane3;
     @FXML
-    private BorderPane contentArea;
+    private StackPane contentArea;
     @FXML
     private VBox vbox;
     @FXML
@@ -111,11 +114,14 @@ public class sidebarController implements Initializable {
     public void loadUI(String ui){
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource(ui+".fxml"));
+            root = load(getClass().getResource(ui+".fxml"));
         } catch (IOException e) {
             Logger.getLogger(sidebarController.class.getName()).log(Level.SEVERE, null, e);
         }
-        contentArea.setCenter(root);
+        contentArea.getChildren().setAll(root);
+
+        //root.WidthProperty().bind(contentArea.widthProperty());
+        //root.HeightProperty().bind(contentArea.heightProperty());
     }
 
 }

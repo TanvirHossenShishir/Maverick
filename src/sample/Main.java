@@ -12,7 +12,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("view/login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("view/sidebar.fxml"));
         //Image icon = new Image("../image/logo3.png");
         //stage.getIcons().add(icon);
         primaryStage.setTitle("MAVERICK");
