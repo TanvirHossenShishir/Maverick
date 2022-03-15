@@ -26,8 +26,8 @@ public class loginController {
         Parent root = load(getClass().getResource("../view/register.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
-        String css = this.getClass().getResource("../css/login.css").toExternalForm();
-        scene.getStylesheets().add(css);
+        //String css = this.getClass().getResource("../css/login.css").toExternalForm();
+        //scene.getStylesheets().add(css);
         stage.setScene(scene);
         stage.show();
         stage.setMinWidth(stage.getWidth());
@@ -38,8 +38,8 @@ public class loginController {
         Parent root = load(getClass().getResource("../view/sidebar.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
-        String css = this.getClass().getResource("../css/sidebar.css").toExternalForm();
-        scene.getStylesheets().add(css);
+        //String css = this.getClass().getResource("../css/sidebar.css").toExternalForm();
+        //scene.getStylesheets().add(css);
         stage.setScene(scene);
         stage.show();
         stage.setMinWidth(stage.getWidth());
@@ -48,9 +48,14 @@ public class loginController {
 
     public void switchTextField() throws IOException{
         textField1.setOnKeyPressed(event -> {
+            function();
             if(event.getCode().equals(KeyCode.ENTER)){
                 textField2.requestFocus();
             }
         });
+    }
+
+    public void function(){
+        System.out.println(textField1.getText());
     }
 }

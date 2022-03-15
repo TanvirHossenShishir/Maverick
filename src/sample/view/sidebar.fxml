@@ -10,16 +10,16 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="580.0" minWidth="950.0" stylesheets="@../css/sidebar.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.sidebarController">
+<AnchorPane minHeight="580.0" minWidth="950.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.sidebarController">
    <children>
       <StackPane fx:id="contentArea" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <AnchorPane fx:id="anchorPane" prefHeight="550.0" prefWidth="245.0" stylesheets="@../css/sidebar.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-200.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane fx:id="anchorPane" prefHeight="550.0" prefWidth="245.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-200.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane fx:id="anchorPane2" layoutX="30.0" layoutY="14.0" prefHeight="550.0" prefWidth="200.0" styleClass="sidebar-background" stylesheets="@../css/sidebar.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane fx:id="anchorPane2" layoutX="30.0" layoutY="14.0" prefHeight="550.0" prefWidth="200.0" styleClass="sidebar-background" stylesheets="@../css/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <VBox layoutX="46.0" layoutY="81.0" prefHeight="330.0" prefWidth="200.0" AnchorPane.bottomAnchor="220.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <Button fx:id="sbutton1" mnemonicParsing="false" onMouseClicked="#forum" prefHeight="45.0" prefWidth="245.0">
+                        <Button fx:id="sbutton1" mnemonicParsing="false" onMouseClicked="#forum" prefHeight="45.0" prefWidth="245.0" styleClass="sidebar-button" stylesheets="@../css/style.css">
                            <graphic>
                               <AnchorPane prefHeight="200.0" prefWidth="200.0">
                                  <children>
@@ -37,7 +37,7 @@
                               </AnchorPane>
                            </graphic>
                         </Button>
-                        <Button fx:id="sbutton2" mnemonicParsing="false" prefHeight="45.0" prefWidth="245.0">
+                        <Button fx:id="sbutton2" mnemonicParsing="false" prefHeight="45.0" prefWidth="245.0" styleClass="sidebar-button" stylesheets="@../css/style.css">
                            <graphic>
                               <AnchorPane prefHeight="200.0" prefWidth="200.0">
                                  <children>
@@ -55,7 +55,7 @@
                               </AnchorPane>
                            </graphic>
                         </Button>
-                        <Button fx:id="sbutton3" mnemonicParsing="false" prefHeight="45.0" prefWidth="245.0">
+                        <Button fx:id="sbutton3" mnemonicParsing="false" prefHeight="45.0" prefWidth="245.0" styleClass="sidebar-button" stylesheets="@../css/style.css">
                            <graphic>
                               <AnchorPane prefHeight="200.0" prefWidth="200.0">
                                  <children>
@@ -73,7 +73,7 @@
                               </AnchorPane>
                            </graphic>
                         </Button>
-                        <Button fx:id="sbutton4" mnemonicParsing="false" prefHeight="45.0" prefWidth="245.0">
+                        <Button fx:id="sbutton4" mnemonicParsing="false" prefHeight="45.0" prefWidth="245.0" styleClass="sidebar-button" stylesheets="@../css/style.css">
                            <graphic>
                               <AnchorPane prefHeight="200.0" prefWidth="200.0">
                                  <children>
@@ -91,7 +91,7 @@
                               </AnchorPane>
                            </graphic>
                         </Button>
-                        <Button fx:id="sbutton5" mnemonicParsing="false" prefHeight="45.0" prefWidth="245.0">
+                        <Button fx:id="sbutton5" mnemonicParsing="false" prefHeight="45.0" prefWidth="245.0" styleClass="sidebar-button" stylesheets="@../css/style.css">
                            <graphic>
                               <AnchorPane prefHeight="200.0" prefWidth="200.0">
                                  <children>
@@ -109,7 +109,7 @@
                               </AnchorPane>
                            </graphic>
                         </Button>
-                        <Button fx:id="sbutton6" mnemonicParsing="false" prefHeight="45.0" prefWidth="245.0">
+                        <Button fx:id="sbutton6" mnemonicParsing="false" prefHeight="45.0" prefWidth="245.0" styleClass="sidebar-button" stylesheets="@../css/style.css">
                            <graphic>
                               <AnchorPane prefHeight="200.0" prefWidth="200.0">
                                  <children>
@@ -127,7 +127,7 @@
                               </AnchorPane>
                            </graphic>
                         </Button>
-                        <Button fx:id="sbutton7" mnemonicParsing="false" onAction="#switchToLogin" prefHeight="45.0" prefWidth="245.0">
+                        <Button fx:id="sbutton7" mnemonicParsing="false" onAction="#switchToLogin" prefHeight="45.0" prefWidth="245.0" styleClass="sidebar-button" stylesheets="@../css/style.css">
                            <graphic>
                               <AnchorPane prefHeight="200.0" prefWidth="200.0">
                                  <children>
@@ -149,11 +149,11 @@
                   </VBox>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="anchorPane3" prefHeight="550.0" prefWidth="45.0" styleClass="sidebar-background" stylesheets="@../css/sidebar.css" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane fx:id="anchorPane3" prefHeight="550.0" prefWidth="45.0" styleClass="sidebar-background" stylesheets="@../css/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <VBox fx:id="vbox" layoutX="-50.0" layoutY="-44.0" prefHeight="318.0" prefWidth="46.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <ToggleButton fx:id="tbutton1" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0">
+                        <ToggleButton fx:id="tbutton1" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" styleClass="sidebar-toggle-button" stylesheets="@../css/style.css">
                            <graphic>
                               <ImageView fitHeight="29.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -162,7 +162,7 @@
                               </ImageView>
                            </graphic>
                         </ToggleButton>
-                        <ToggleButton fx:id="tbutton2" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0">
+                        <ToggleButton fx:id="tbutton2" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" styleClass="sidebar-toggle-button" stylesheets="@../css/style.css">
                            <graphic>
                               <ImageView fitHeight="29.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -171,7 +171,7 @@
                               </ImageView>
                            </graphic>
                         </ToggleButton>
-                        <ToggleButton fx:id="tbutton3" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0">
+                        <ToggleButton fx:id="tbutton3" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" styleClass="sidebar-toggle-button" stylesheets="@../css/style.css">
                            <graphic>
                               <ImageView fitHeight="29.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -180,7 +180,7 @@
                               </ImageView>
                            </graphic>
                         </ToggleButton>
-                        <ToggleButton fx:id="tbutton4" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0">
+                        <ToggleButton fx:id="tbutton4" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" styleClass="sidebar-toggle-button" stylesheets="@../css/style.css">
                            <graphic>
                               <ImageView fitHeight="29.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -189,7 +189,7 @@
                               </ImageView>
                            </graphic>
                         </ToggleButton>
-                        <ToggleButton fx:id="tbutton5" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0">
+                        <ToggleButton fx:id="tbutton5" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" styleClass="sidebar-toggle-button" stylesheets="@../css/style.css">
                            <graphic>
                               <ImageView fitHeight="29.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -198,7 +198,7 @@
                               </ImageView>
                            </graphic>
                         </ToggleButton>
-                        <ToggleButton fx:id="tbutton6" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0">
+                        <ToggleButton fx:id="tbutton6" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" styleClass="sidebar-toggle-button" stylesheets="@../css/style.css">
                            <graphic>
                               <ImageView fitHeight="29.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -207,7 +207,7 @@
                               </ImageView>
                            </graphic>
                         </ToggleButton>
-                        <ToggleButton fx:id="tbutton7" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0">
+                        <ToggleButton fx:id="tbutton7" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" styleClass="sidebar-toggle-button" stylesheets="@../css/style.css">
                            <graphic>
                               <ImageView fitHeight="29.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
