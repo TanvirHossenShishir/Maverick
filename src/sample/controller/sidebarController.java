@@ -2,6 +2,8 @@ package sample.controller;
 
 import javafx.animation.FadeTransition;
 import javafx.animation.TranslateTransition;
+import javafx.beans.property.DoubleProperty;
+import javafx.beans.property.SimpleDoubleProperty;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -16,6 +18,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -37,7 +40,7 @@ public class sidebarController implements Initializable {
     @FXML
     private AnchorPane anchorPane, anchorPane2, anchorPane3;
     @FXML
-    private BorderPane contentArea;
+    private StackPane contentArea;
     @FXML
     private VBox vbox;
     @FXML
@@ -96,8 +99,8 @@ public class sidebarController implements Initializable {
         Parent root = load(getClass().getResource("../view/login.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
-        String css = this.getClass().getResource("../css/login.css").toExternalForm();
-        scene.getStylesheets().add(css);
+        //String css = this.getClass().getResource("../css/login.css").toExternalForm();
+        //scene.getStylesheets().add(css);
         stage.setScene(scene);
         stage.show();
         stage.setMinWidth(stage.getWidth());
@@ -107,15 +110,21 @@ public class sidebarController implements Initializable {
     public void forum(MouseEvent event){
         loadUI("../view/forum");
     }
+    public void settings(MouseEvent event){
+        loadUI("../view/settings");
+    }
+    public void repository(MouseEvent event){
+        loadUI("../view/repository");
+    }
 
     public void loadUI(String ui){
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource(ui+".fxml"));
+            root = load(getClass().getResource(ui+".fxml"));
         } catch (IOException e) {
             Logger.getLogger(sidebarController.class.getName()).log(Level.SEVERE, null, e);
         }
-        contentArea.setCenter(root);
+        contentArea.getChildren().setAll(root);
     }
 
 }
