@@ -1,36 +1,165 @@
-.text-field{
-    -fx-border-color: #27292e;
-    -fx-background-color: #313339;
+/*=========Dark Theme=========*/
+* {
+    -fx-black-shade-1: #1e1f21;
+    -fx-black-shade-2: #27292e;
+    -fx-black-shade-3: #313339;
+    -fx-black-shade-4: #36393f;
+	-fx-yellow-shade-1: #c2950c;
+	-fx-yellow-shade-2: #d6a40b;
+	-fx-yellow-shade-3: #f2c811;
+	-fx-grey-shade-0: #e6e6e7;
+	-fx-grey-shade-1: #848487;
+	-fx-grey-shade-2: #b5b5a8;
+	-fx-grey-shade-3: #36393f;
+	-fx-grey-shade-4: #2f3136;
+	-fx-blue-shade-1: #4a4d52;
+    -fx-blue-shade-2: #165a72;
+    -fx-blue-shade-3: #1e7898;
+}
+
+.login-background{
+    -fx-background-color: -fx-black-shade-4;
+}
+.login-text-field{
+    -fx-border-color: -fx-black-shade-2;
+    -fx-background-color: -fx-black-shade-3;
     -fx-border-radius: 4.0;
     -fx-background-radius: 4.0;
-    -fx-prompt-text-fill:black;
-    -fx-text-fill: white;
+    -fx-prompt-text-fill: -fx-grey-shade-0;
+    -fx-text-fill: -fx-grey-shade-0;
     -fx-font-size: 17.0;
 }
-
-.text-field:hover{
-    -fx-border-color: #1e1f21;
+.login-text-field:hover{
+    -fx-border-color: -fx-black-shade-1;
 }
-
-.text-field:focused{
-    -fx-border-color: #ffc619;
-    -fx-background-color: #313339;
-    -fx-prompt-text-fill: white;
+.login-text-field:focused{
+    -fx-border-color: -fx-yellow-shade-3;
+    -fx-background-color: -fx-black-shade-3;
+    -fx-prompt-text-fill: -fx-grey-shade-0;
     -fx-font-size: 18.0;
 }
 
-.button{
+.login-button{
     -fx-font-size: 17.0;
-    -fx-background-color: #ffc619;
+    -fx-background-color: -fx-yellow-shade-3;
+}
+.login-button:hover{
+    -fx-font-size: 17.0;
+    -fx-background-color: -fx-yellow-shade-2;
+}
+.login-button:pressed{
+    -fx-font-size: 17.0;
+    -fx-background-color: -fx-yellow-shade-1;
 }
 
-.button:hover{
-    -fx-font-size: 17.0;
-    -fx-background-color: #d6a40b;
+.login-hyperlink{
+    -fx-text-fill: -fx-yellow-shade-3;
+}
+.login-hyperlink:hover {
+    -fx-underline: true;
+}
+.login-hyperlink:focused{
+    -fx-text-fill: -fx-yellow-shade-2;
+    -fx-border-color:  transparent;
 }
 
-.button:pressed{
-    -fx-font-size: 17.0;
-    -fx-background-color: #c2950c;
+.date-picker .combo-box-base{
+    -fx-border-color: transparent;
 }
 
+.date-picker .text-field {
+    -fx-control-inner-background: #313339;
+    -fx-border-color: -fx-black-shade-2;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5 0 0 5;
+}
+.date-picker .text-field:hover{
+    -fx-border-color: -fx-black-shade-1;
+    -fx-border-color: transparent;
+}
+.date-picker .arrow-button {
+	-fx-background-color: -fx-blue-shade-3;
+	-fx-background-radius: 0  5 5 0;
+}
+.date-picker .arrow-button:hover {
+	-fx-background-color: -fx-blue-shade-1;
+}
+.date-picker .arrow-button .arrow {
+	-fx-background-color: white;
+}
+.date-picker .cell {
+	-fx-background-color: white;
+}
+.date-picker .cell:hover {
+	-fx-background-color: -fx-blue-shade-3;
+}
+.date-picker .cell:focused {
+	-fx-background-color: -fx-blue-shade-3;
+}
+.date-picker .selected {
+	-fx-background-color: -fx-blue-shade-1;
+	-fx-text-fill: white;
+}
+.date-picker .selected:focused {
+	-fx-background-color: -fx-blue-shade-1;
+	-fx-text-fill: white;
+}
+.date-picker-popup  {
+	-fx-border-color: transparent;
+}
+.date-picker-popup .month-year-pane {
+	-fx-background-color: -fx-blue-shade-1;
+}
+.date-picker-popup .month-year-pane .label {
+	-fx-text-fill: white;
+}
+.date-picker-popup .week-number-cell {
+	-fx-text-fill: -fx-blue-shade-3;
+}
+.date-picker-popup .spinner .button .left-arrow,
+.date-picker-popup .spinner .button .right-arrow {
+	-fx-background-color: -fx-blue-shade-3;
+}
+
+.combo-box .list-cell
+{
+    -fx-background: -fx-grey-shade-3;
+    -fx-background-color: fx-grey-shade-3;
+    -fx-text-fill: black;
+    -fx-padding: 3 0 2 7;
+    -fx-cell-size: 1.66667em;
+}
+.combo-box-popup .list-view .list-cell:filled:hover
+{
+    -fx-background-color: -fx-yellow-shade-3;
+    -fx-text-fill: black;
+}
+.combo-box-base
+{
+    -fx-background-color: -fx-black-shade-2;
+    -fx-background-radius: 5;
+    -fx-padding: 0;
+    -fx-font-size: 17.0;
+    -fx-text-fill: black;
+}
+.combo-box-base:hover
+{
+    -fx-background-color: -fx-black-shade-1;
+}
+.combo-box-base:disabled {
+    -fx-opacity: .4;
+}
+
+
+.check-box .box {
+    -fx-background-color: -fx-black-shade-3;
+    -fx-border-color: -fx-black-shade-2;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+}
+.check-box:selected .mark {
+    -fx-background-color: -fx-yellow-shade-3;
+}
+.check-box:selected .box {
+    -fx-background-color: transparent;
+}

@@ -12,10 +12,13 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+
         Parent root = FXMLLoader.load(getClass().getResource("view/login.fxml"));
         primaryStage.setTitle("MAVERICK");
         Scene scene = new Scene(root);
 
+        primaryStage.getIcons().add(new Image(
+                getClass().getResourceAsStream( "image/logo3.png" )));
         //String css = this.getClass().getResource("css/login.css").toExternalForm();
         //scene.getStylesheets().add(css);
 
@@ -24,9 +27,6 @@ public class Main extends Application {
         primaryStage.setMinWidth(primaryStage.getWidth());
         primaryStage.setMinHeight(primaryStage.getHeight());
     }
-
-
-
     public static void main(String[] args) {
         launch(args);
     }

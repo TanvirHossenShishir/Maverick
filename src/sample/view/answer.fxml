@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="questionSummary" fillHeight="false" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.answerController">
+   <children>
+      <VBox minWidth="64.0" prefWidth="64.0">
+         <children>
+            <ToggleButton fx:id="tbutton1" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" styleClass="upvote-toggle-button" stylesheets="@../css/style.css">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/up-arrow-2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets left="15.0" top="15.0" />
+               </VBox.margin>
+            </ToggleButton>
+            <Label alignment="CENTER" minWidth="65.0" text="153">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <ToggleButton mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" styleClass="downvote-toggle-button" stylesheets="@../css/style.css">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/down-arrow-2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" />
+               </VBox.margin>
+            </ToggleButton>
+         </children>
+      </VBox>
+      <VBox prefWidth="564.0" HBox.hgrow="ALWAYS">
+         <children>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Label prefHeight="38.0" text="Answered by">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Hyperlink styleClass="login-hyperlink" stylesheets="@../css/login.css" text="Akib Mahmud">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Hyperlink>
+                  <Separator maxHeight="-Infinity" opacity="0.33" orientation="VERTICAL" prefHeight="20.0">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Separator>
+                  <Label prefHeight="38.0" text="15 March 2022">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" right="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <Label fx:id="answer" contentDisplay="CENTER" text="Find the index of the array element you want to remove using indexOf , and then remove that index with splice . The splice() method changes the contents of an array by removing existing elements and/or adding new elements. The second parameter of splice is the number of elements to remove." textAlignment="JUSTIFY" wrapText="true">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="15.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="30.0" />
+   </padding>
+</HBox>

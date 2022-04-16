@@ -8,8 +8,8 @@
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
@@ -25,32 +25,31 @@
          <children>
             <HBox prefHeight="55.0" prefWidth="905.0">
                <children>
-                  <TextField maxWidth="800.0" minHeight="35.0" prefHeight="35.0" prefWidth="800.0" promptText="Search Question" styleClass="forum-search-text-field" stylesheets="@../css/style.css">
-                     <HBox.margin>
-                        <Insets left="20.0" top="10.0" />
-                     </HBox.margin>
-                     <font>
-                        <Font size="17.0" />
-                     </font>
-                  </TextField>
-                  <Button minHeight="35.0" minWidth="35.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="35.0" stylesheets="@../css/style.css">
-                     <HBox.margin>
-                        <Insets top="10.0" />
-                     </HBox.margin>
-                     <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" opacity="0.73" pickOnBounds="true" preserveRatio="true">
+                  <HBox alignment="CENTER_LEFT" minWidth="500.0" prefHeight="35.0" prefWidth="850.0" styleClass="repo-search" stylesheets="@../css/style.css">
+                     <children>
+                        <TextField prefHeight="30.0" prefWidth="800.0" promptText="Search question" styleClass="forum-search-text-field" stylesheets="@../css/style.css">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <ImageView fitHeight="29.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../image/magnifying-glass.png" />
                            </image>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
                         </ImageView>
-                     </graphic>
-                     <styleClass>
-                        <String fx:value="forum-search-button" />
-                        <String fx:value="forum-button" />
-                     </styleClass>
-                  </Button>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="20.0" top="10.0" />
+                     </HBox.margin>
+                  </HBox>
                   <Pane minWidth="40.0" prefHeight="55.0" prefWidth="27.0" HBox.hgrow="ALWAYS" />
-                  <Button minHeight="35.0" minWidth="180.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="220.0" stylesheets="@../css/style.css" text=" Ask Question">
+                  <Button fx:id="askQuestion" minHeight="35.0" minWidth="180.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="220.0" stylesheets="@../css/style.css" text="ASK QUESTION">
                      <HBox.margin>
                         <Insets top="10.0" />
                      </HBox.margin>
@@ -71,10 +70,10 @@
                   </Button>
                   <MenuButton alignment="CENTER" contentDisplay="CENTER" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" stylesheets="@../css/style.css">
                     <items>
-                      <MenuItem mnemonicParsing="false" text="Your Post" />
-                      <MenuItem mnemonicParsing="false" text="Bookmarks" />
-                        <MenuItem mnemonicParsing="false" text="You Replied" />
-                        <MenuItem mnemonicParsing="false" text="Tagged On" />
+                      <MenuItem mnemonicParsing="false" text="YOUR POST" />
+                      <MenuItem mnemonicParsing="false" text="BOOKMARK" />
+                        <MenuItem mnemonicParsing="false" text="YOU REPLIED" />
+                        <MenuItem mnemonicParsing="false" text="REQUESTED" />
                     </items>
                      <HBox.margin>
                         <Insets left="10.0" right="10.0" top="10.0" />
@@ -99,7 +98,7 @@
                         <Insets left="20.0" top="10.0" />
                      </HBox.margin>
                   </ComboBox>
-                  <Button maxHeight="35.0" maxWidth="220.0" minHeight="35.0" minWidth="130.0" mnemonicParsing="false" onMouseClicked="#filter" prefHeight="35.0" prefWidth="130.0" styleClass="forum-button" stylesheets="@../css/style.css" text="  Filter">
+                  <Button maxHeight="35.0" maxWidth="220.0" minHeight="35.0" minWidth="130.0" mnemonicParsing="false" onMouseClicked="#filter" prefHeight="35.0" prefWidth="130.0" styleClass="forum-button" stylesheets="@../css/style.css" text="  FILTER">
                      <HBox.margin>
                         <Insets left="10.0" top="10.0" />
                      </HBox.margin>
@@ -110,6 +109,9 @@
                            </image>
                         </ImageView>
                      </graphic>
+                     <font>
+                        <Font name="Segoe UI" size="13.600000381469727" />
+                     </font>
                   </Button>
                   <Pane minWidth="40.0" prefHeight="55.0" prefWidth="542.0" />
                </children>
@@ -122,145 +124,17 @@
          <children>
             <VBox prefHeight="330.0" prefWidth="631.0" HBox.hgrow="ALWAYS">
                <HBox.margin>
-                  <Insets bottom="20.0" left="20.0" />
+                  <Insets left="20.0" />
                </HBox.margin>
                <children>
                   <StackPane fx:id="filterPane">
                      <VBox.margin>
-                        <Insets />
+                        <Insets right="18.0" />
                      </VBox.margin>
                   </StackPane>
-                  <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="450.0" prefWidth="1130.0">
+                  <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="2000.0" prefWidth="1130.0">
                      <content>
-                        <VBox prefHeight="129.0" prefWidth="630.0">
-                           <children>
-                              <HBox styleClass="ques-background" stylesheets="@../css/style.css" VBox.vgrow="ALWAYS">
-                                 <children>
-                                    <VBox minWidth="65.0" prefHeight="158.0" prefWidth="64.0">
-                                       <children>
-                                          <ToggleButton fx:id="tbutton1" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" styleClass="upvote-toggle-button" stylesheets="@../css/style.css">
-                                             <graphic>
-                                                <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                                   <image>
-                                                      <Image url="@../image/up-arrow%20(1).png" />
-                                                   </image>
-                                                </ImageView>
-                                             </graphic>
-                                             <VBox.margin>
-                                                <Insets left="15.0" top="15.0" />
-                                             </VBox.margin>
-                                          </ToggleButton>
-                                          <Label alignment="CENTER" minWidth="65.0" text="153">
-                                             <VBox.margin>
-                                                <Insets bottom="5.0" top="5.0" />
-                                             </VBox.margin>
-                                             <font>
-                                                <Font name="System Bold" size="16.0" />
-                                             </font>
-                                          </Label>
-                                          <ToggleButton mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" styleClass="downvote-toggle-button" stylesheets="@../css/style.css">
-                                             <graphic>
-                                                <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                                   <image>
-                                                      <Image url="@../image/down-arrow%20(2).png" />
-                                                   </image>
-                                                </ImageView>
-                                             </graphic>
-                                             <VBox.margin>
-                                                <Insets bottom="15.0" left="15.0" />
-                                             </VBox.margin>
-                                          </ToggleButton>
-                                       </children>
-                                    </VBox>
-                                    <VBox prefHeight="132.0" prefWidth="564.0" HBox.hgrow="ALWAYS">
-                                       <children>
-                                          <HBox>
-                                             <children>
-                                                <Label prefHeight="38.0" prefWidth="32.0" text="CSE">
-                                                   <font>
-                                                      <Font size="16.0" />
-                                                   </font>
-                                                   <HBox.margin>
-                                                      <Insets left="10.0" />
-                                                   </HBox.margin>
-                                                </Label>
-                                                <Label prefHeight="38.0" prefWidth="111.0" text="2nd Semester">
-                                                   <font>
-                                                      <Font size="16.0" />
-                                                   </font>
-                                                   <HBox.margin>
-                                                      <Insets left="20.0" />
-                                                   </HBox.margin>
-                                                </Label>
-                                                <Label prefHeight="38.0" prefWidth="184.0" text="Posted by Akib Mahmud">
-                                                   <font>
-                                                      <Font size="16.0" />
-                                                   </font>
-                                                   <HBox.margin>
-                                                      <Insets left="30.0" />
-                                                   </HBox.margin>
-                                                </Label>
-                                             </children>
-                                          </HBox>
-                                          <Label contentDisplay="CENTER" prefHeight="66.0" prefWidth="564.0" text="What is your plan if nuclear war starts?" textAlignment="CENTER">
-                                             <font>
-                                                <Font size="26.0" />
-                                             </font>
-                                             <VBox.margin>
-                                                <Insets left="10.0" />
-                                             </VBox.margin>
-                                          </Label>
-                                          <HBox>
-                                             <children>
-                                                <Button minHeight="35.0" minWidth="118.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="165.0" styleClass="comment-button" stylesheets="@../css/style.css" text=" 7 Comments">
-                                                   <graphic>
-                                                      <ImageView fitHeight="27.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-                                                         <image>
-                                                            <Image url="@../image/comment.png" />
-                                                         </image>
-                                                      </ImageView>
-                                                   </graphic>
-                                                   <font>
-                                                      <Font size="16.0" />
-                                                   </font>
-                                                </Button>
-                                                <Button minHeight="35.0" minWidth="118.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="139.0" styleClass="comment-button" stylesheets="@../css/style.css" text=" 2 Answers">
-                                                   <graphic>
-                                                      <ImageView fitHeight="27.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-                                                         <image>
-                                                            <Image url="@../image/comment.png" />
-                                                         </image>
-                                                      </ImageView>
-                                                   </graphic>
-                                                   <font>
-                                                      <Font size="16.0" />
-                                                   </font>
-                                                   <HBox.margin>
-                                                      <Insets left="10.0" />
-                                                   </HBox.margin>
-                                                </Button>
-                                                <Button minHeight="35.0" minWidth="118.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="158.0" styleClass="comment-button" stylesheets="@../css/style.css" text=" 2 Bookmarks">
-                                                   <graphic>
-                                                      <ImageView fitHeight="27.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-                                                         <image>
-                                                            <Image url="@../image/comment.png" />
-                                                         </image>
-                                                      </ImageView>
-                                                   </graphic>
-                                                   <font>
-                                                      <Font size="16.0" />
-                                                   </font>
-                                                   <HBox.margin>
-                                                      <Insets left="10.0" />
-                                                   </HBox.margin>
-                                                </Button>
-                                             </children>
-                                          </HBox>
-                                       </children>
-                                    </VBox>
-                                 </children>
-                              </HBox>
-                           </children></VBox>
+                        <VBox fx:id="questionArea" prefWidth="630.0" spacing="15.0" />
                      </content>
                      <VBox.margin>
                         <Insets top="10.0" />
@@ -268,23 +142,171 @@
                   </ScrollPane>
                </children>
             </VBox>
-            <Pane maxWidth="30.0" minWidth="20.0" HBox.hgrow="ALWAYS">
+            <Pane maxWidth="30.0" minWidth="0.0" HBox.hgrow="ALWAYS">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
             </Pane>
-            <ScrollPane fitToHeight="true" fitToWidth="true" maxWidth="270.0" minWidth="215.0" prefHeight="448.0" prefWidth="215.0" HBox.hgrow="ALWAYS">
+            <VBox maxWidth="270.0" minWidth="215.0" prefWidth="215.0" HBox.hgrow="ALWAYS">
                <HBox.margin>
                   <Insets bottom="20.0" right="20.0" top="10.0" />
                </HBox.margin>
-               <content>
-                  <Label alignment="CENTER" contentDisplay="CENTER" minWidth="215.0" prefHeight="20.0" prefWidth="500.0" text="TOP QUESTIONS" textFill="#c94b07">
-                     <font>
-                        <Font name="System Bold" size="20.0" />
-                     </font>
-                  </Label>
-               </content>
-            </ScrollPane>
+               <children>
+                  <VBox styleClass="ques-background" stylesheets="@../css/style.css">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" minWidth="215.0" prefHeight="20.0" prefWidth="300.0" styleClass="title-color" stylesheets="@../css/style.css" text="TOP CONTRIBUTORS" textAlignment="CENTER" textFill="#1e7898">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Separator prefWidth="200.0" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="43.0" prefWidth="219.0">
+                           <children>
+                              <Label text="1">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" right="10.0" />
+                                 </HBox.margin></Label>
+                              <ImageView fitHeight="24.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/profile.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label text="USERNAME 1">
+                                 <font>
+                                    <Font name="Segoe UI" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="43.0" prefWidth="221.0">
+                           <children>
+                              <Label text="2">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ImageView fitHeight="24.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/profile.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label text="USERNAME 2">
+                                 <font>
+                                    <Font name="Segoe UI" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="43.0" prefWidth="221.0">
+                           <children>
+                              <Label text="3">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ImageView fitHeight="24.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/profile.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label text="USERNAME 3">
+                                 <font>
+                                    <Font name="Segoe UI" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="43.0" prefWidth="221.0">
+                           <children>
+                              <Label text="4">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ImageView fitHeight="24.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/profile.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label text="USERNAME 4">
+                                 <font>
+                                    <Font name="Segoe UI" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Separator prefWidth="219.0" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="43.0" prefWidth="221.0">
+                           <children>
+                              <Label text="5">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ImageView fitHeight="24.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/profile.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label text="USERNAME 5">
+                                 <font>
+                                    <Font name="Segoe UI" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
          </children>
       </HBox>
    </center>

@@ -1,35 +1,120 @@
-/*=========Dark Theme=========*/
+/*=========Light Theme=========*/
 * {
     -fx-black-shade-1: #1e1f21;
     -fx-black-shade-2: #27292e;
     -fx-black-shade-3: #313339;
     -fx-black-shade-4: #36393f;
+	-fx-blue-shade-1: #134b5f;
+	-fx-blue-shade-2: #165a72;
+	-fx-blue-shade-3: #1e7898;
 	-fx-yellow-shade-1: #c2950c;
 	-fx-yellow-shade-2: #d6a40b;
 	-fx-yellow-shade-3: #f2c811;
-	-fx-grey-shade-0: #e6e6e7;
-	-fx-grey-shade-1: #848487;
+	-fx-grey-shade-0: #4d4d4d;
+	-fx-grey-shade-1: #9e9e93;
 	-fx-grey-shade-2: #b5b5a8;
-
-
-    -fx-grey-shade-3: #313335;
-	-fx-grey-shade-4: #2b2b2b;
-    -fx-blue-shade-1: #3c3f41;
-	/*-fx-grey-shade-3: #36393f;
-	-fx-grey-shade-4: #2f3136;
-	-fx-blue-shade-1: #4a4d52;*/
-    -fx-blue-shade-2: #165a72;
-    -fx-blue-shade-3: #1e7898;
-}
-
-.label{
-    -fx-text-fill: white;
-}
-.button:hover{
-    -fx-text-fill: black;
+	-fx-grey-shade-3: #e2e2d2;
+	-fx-grey-shade-4: #efefef;
 }
 
 /*--------------Login/Register/Verify CSS--------------*/
+.login-background{
+    -fx-background-color: -fx-black-shade-4;
+}
+.login-text-field{
+    -fx-border-color: -fx-black-shade-2;
+    -fx-background-color: -fx-black-shade-3;
+    -fx-border-radius: 4.0;
+    -fx-background-radius: 4.0;
+    -fx-prompt-text-fill:black;
+    -fx-text-fill: white;
+    -fx-font-size: 17.0;
+}
+.login-text-field:hover{
+    -fx-border-color: -fx-black-shade-1;
+}
+.login-text-field:focused{
+    -fx-border-color: -fx-yellow-shade-3;
+    -fx-background-color: -fx-black-shade-3;
+    -fx-prompt-text-fill: white;
+    -fx-font-size: 18.0;
+}
+
+.login-button{
+    -fx-font-size: 17.0;
+    -fx-background-color: -fx-yellow-shade-3;
+}
+.login-button:hover{
+    -fx-font-size: 17.0;
+    -fx-background-color: -fx-yellow-shade-2;
+}
+.login-button:pressed{
+    -fx-font-size: 17.0;
+    -fx-background-color: -fx-yellow-shade-1;
+}
+
+.login-hyperlink{
+    -fx-text-fill: -fx-yellow-shade-3;
+}
+.login-hyperlink:hover {
+    -fx-underline: true;
+}
+.login-hyperlink:focused{
+    -fx-text-fill: -fx-yellow-shade-2;
+    -fx-border-color:  transparent;
+}
+
+.date-picker .text-field {
+    -fx-control-inner-background: #313339;
+    -fx-border-color: transparent;
+}
+.date-picker .text-field:hover{
+    -fx-border-color: #1e1f21;
+}
+.date-picker .arrow-button {
+	-fx-background-color: -fx-blue-shade-3;
+	-fx-background-radius: 0;
+}
+.date-picker .arrow-button:hover {
+	-fx-background-color: -fx-blue-shade-1;
+}
+.date-picker .arrow-button .arrow {
+	-fx-background-color: white;
+}
+.date-picker .cell {
+	-fx-background-color: white;
+}
+.date-picker .cell:hover {
+	-fx-background-color: -fx-blue-shade-3;
+}
+.date-picker .cell:focused {
+	-fx-background-color: -fx-blue-shade-3;
+}
+.date-picker .selected {
+	-fx-background-color: -fx-blue-shade-1;
+	-fx-text-fill: white;
+}
+.date-picker .selected:focused {
+	-fx-background-color: -fx-blue-shade-1;
+	-fx-text-fill: white;
+}
+.date-picker-popup  {
+	-fx-border-color: transparent;
+}
+.date-picker-popup .month-year-pane {
+	-fx-background-color: -fx-blue-shade-1;
+}
+.date-picker-popup .month-year-pane .label {
+	-fx-text-fill: white;
+}
+.date-picker-popup .week-number-cell {
+	-fx-text-fill: -fx-blue-shade-3;
+}
+.date-picker-popup .spinner .button .left-arrow,
+.date-picker-popup .spinner .button .right-arrow {
+	-fx-background-color: -fx-blue-shade-3;
+}
+
 
 /*--------------Sidebar CSS--------------*/
 .sidebar-button{
@@ -70,39 +155,41 @@
     -fx-background-color: -fx-blue-shade-1;
 }
 
-.sidebar-drop-shadow{
-    -fx-background-color: -fx-blue-shade-1;
-    -fx-effect: dropShadow(gaussian,rgba(0,0,0,0.2) , 10.0, 0.0, 10.0, 0.0);
-}
-
-
 /*--------------Forum CSS--------------*/
 .forum-search-text-field{
-    -fx-background-color: transparent;
-    -fx-prompt-text-fill: -fx-grey-shade-0;
-    -fx-text-fill: -fx-grey-shade-0;
-    -fx-font-size: 15.0;
+    -fx-background-color: -fx-grey-shade-3;
+    -fx-border-color: -fx-grey-shade-2;
+    -fx-border-radius: 0.0;
+    -fx-border-width: 1 0 1 1;
+    -fx-background-radius: 0.0;
+    -fx-prompt-text-fill: #5a5a54;
+    -fx-text-fill: black;
+    -fx-font-size: 17.0;
+}
+.forum-search-text-field:hover{
+    -fx-border-color: -fx-grey-shade-1;
 }
 .forum-search-text-field:focused{
-    -fx-prompt-text-fill: -fx-grey-shade-0;
-    -fx-font-size: 15.0;
+    -fx-border-color: -fx-grey-shade-1;
+    -fx-background-color: white;
+    -fx-prompt-text-fill: #5a5a54;
+    -fx-font-size: 17.0;
 }
 
 .forum-button{
     -fx-font-size: 17.0;
-    -fx-text-fill: black;
-    -fx-background-color: -fx-yellow-shade-3;
+    -fx-background-color: -fx-grey-shade-3;
     -fx-background-radius: 5.0;
     -fx-border-color: none;
     -fx-border-radius: 5.0;
     -fx-padding: 0 0 0 0;
 }
 .forum-button:hover{
-    -fx-background-color: -fx-yellow-shade-2;
+    -fx-background-color: -fx-yellow-shade-3;
     -fx-text-fill: black;
 }
 .forum-button:pressed{
-    -fx-background-color: -fx-yellow-shade-1;
+    -fx-background-color: -fx-yellow-shade-2;
     -fx-text-fill: black;
 }
 
@@ -110,7 +197,6 @@
     -fx-background-color: -fx-grey-shade-4;
     -fx-text-color: white;
 }
-
 .forum-whole-background{
     -fx-background-color: -fx-grey-shade-4;
 }
@@ -123,11 +209,8 @@
     -fx-border-width: 1 1 1 0;
 }
 
-.title-color{
-    -fx-text-fill: -fx-yellow-shade-3;
-}
-
 .forum-ask-question-button{
+    -fx-text-fill: -fx-grey-shade-1;
     -fx-font-weight: bold;
     -fx-font-size: 17.0;
 }
@@ -142,20 +225,11 @@
 
 .combo-box .list-cell
 {
-    -fx-background: -fx-grey-shade-3;
-    /*-fx-background-color: -fx-yellow-shade-3;*/
+    -fx-background: white;
+    -fx-background-color: transparent;
     -fx-text-fill: black;
     -fx-padding: 3 0 2 7;
     -fx-cell-size: 1.66667em;
-}
-.combo-box-popup .list-view .list-cell:filled .scroll-bar
-{
-    -fx-background-color: none;
-}
-.combo-box-popup .list-view .list-cell:filled
-{
-    -fx-background-color: -fx-grey-shade-3;
-    -fx-text-fill: white;
 }
 .combo-box-popup .list-view .list-cell:filled:hover
 {
@@ -164,7 +238,7 @@
 }
 .combo-box-base
 {
-    -fx-background-color: -fx-yellow-shade-3;
+    -fx-background-color: -fx-grey-shade-3;
     -fx-background-radius: 6, 6, 6, 6;
     -fx-background-insets: 0 0 -1 0, 0, 1, 2;
     -fx-padding: 0;
@@ -173,28 +247,23 @@
 }
 .combo-box-base:hover
 {
-    -fx-background-color: -fx-yellow-shade-2;
+    -fx-background-color: -fx-yellow-shade-3;
 }
 .combo-box-base:disabled {
     -fx-opacity: .4;
 }
 
-
-
 .menu-button{
     -fx-padding: 0;
-    -fx-background-color: -fx-yellow-shade-3;
+    -fx-background-color: -fx-grey-shade-3;
     -fx-background-radius: 5.0;
     -fx-border-color: none;
 }
 .menu-button:hover{
-    -fx-background-color: -fx-yellow-shade-2;
+    -fx-background-color: -fx-yellow-shade-3;
 }
 .menu-button:pressed{
-    -fx-background-color: -fx-yellow-shade-1;
-}
-.menu-button .label{
-    -fx-text-fill: black;
+    -fx-background-color: -fx-grey-shade-2;
 }
 .menu-button > .arrow-button {
     -fx-padding: 0;
@@ -203,7 +272,7 @@
     -fx-padding: 0;
 }
 .menu-item .label {
-    -fx-text-fill: -fx-grey-shade-0;
+    -fx-text-fill: black;
     -fx-font-size: 17.0;
 }
 .menu-item:focused {
@@ -213,13 +282,24 @@
     -fx-text-fill: black;
 }
 .context-menu {
-    -fx-background-color: -fx-grey-shade-3;
+    -fx-background-color: white;
     -fx-background-radius: 6 6 6 6;
     -fx-padding: 0.5em 0em 0.5em 0em;
 }
 
 
-
+.check-box .box {
+    -fx-background-color: white;
+    -fx-border-color: grey;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+.check-box:selected .mark {
+    -fx-background-color: white;
+}
+.check-box:selected .box {
+    -fx-background-color: -fx-blue-shade-2;
+}
 
 
 .scroll-pane {
@@ -251,24 +331,24 @@
 
 /*--------------Forum Question CSS--------------*/
 .ques-background {
-    -fx-background-color: -fx-grey-shade-3;
+    -fx-background-color: white;
     -fx-background-radius: 5.0;
     -fx-border-radius: 5px;
     -fx-border-color: -fx-grey-shade-2;
 }
 .ques-background:hover{
-    -fx-border-color: -fx-yellow-shade-3;
+    -fx-border-color: -fx-blue-shade-3;
 }
 
 .comment-button{
     -fx-background-color: transparent;
-    -fx-text-fill: -fx-grey-shade-0;
+    -fx-text-fill: grey;
     -fx-background-radius: 0px;
     -fx-border-radius: 0px;
     -fx-font-size: 16.0;
 }
 .comment-button:hover{
-    -fx-background-color: derive(-fx-grey-shade-1, 95%);
+    -fx-background-color: lightblue;
     -fx-font-size: 16.0;
 }
 .upvote-toggle-button{
@@ -300,6 +380,7 @@
     -fx-background-color: none;
     -fx-border-color: #cb5153;
 }
+
 /*------------Forum Contributor-----------*/
 
 /*------------Repository---------------*/
@@ -307,93 +388,8 @@
     -fx-background-radius: 50px;
     -fx-border-radius: 50px;
     -fx-border-color: -fx-grey-shade-2;
-    -fx-background-color: -fx-black-shade-4;
-    -fx-prompt-text-fill: white;
+    -fx-background-color: white;
 }
-.repo-search:hover{
-    -fx-border-color: -fx-yellow-shade-3;
-}
-.repo-search:focused{
-
-    -fx-border-color: -fx-yellow-shade-3;
-}
-
-.lightest-grey-background{
-    -fx-background-color: -fx-grey-shade-3;
-    -fx-border-color: -fx-grey-shade-2;
-    -fx-background-radius: 5px;
-    -fx-border-radius: 5px;
-}
-.lightest-grey-background:hover{
-    -fx-border-color: -fx-yellow-shade-3;
-}
-
 .transparent-background{
     -fx-background-color: transparent;
 }
-
-/*-----------ask question -------------*/
-.label-grey{
-    -fx-text-fill: derive(#afb1bf, 50%);
-}
-.dialog-textfield{
-    -fx-font-size: 15;
-    -fx-background-radius: 5;
-    -fx-border-radius: 5;
-    -fx-text-fill: #ffffff;
-    -fx-display-caret:true;
-}
-.text-area {
-    -fx-font-size: 15;
-    -fx-background-radius: 5;
-    -fx-border-radius: 5;
-    -fx-text-fill: #ffffff;
-    -fx-display-caret:true;
-}
-
-.text-area .content {
--fx-background-radius: 5;
-    -fx-border-radius: 5;
-    -fx-background-color: -fx-grey-shade-3;
-}
-.myDialog{
-    -fx-background-color: -fx-grey-shade-4;
-}
-.myDialog > *.button-bar > *.container{
-    -fx-background-color: -fx-grey-shade-4;
-}
-.myDialog > *.label.content{
-    -fx-font-size: 14px;
-    -fx-font-weight: bold;
-}
-.myDialog:header *.header-panel{
-    -fx-background-color: -fx-grey-shade-4;
-}
-.myDialog:header *.header-panel *.label{
-    -fx-font-size: 18px;
-    -fx-font-style: italic;
-    -fx-fill: #292929;
-}
-
-/*
-.dialog > .dialog-pane {
-    -fx-background-color: greenyellow;
-}
-
-.dialog > .dialog-pane > .button-bar {
-    -fx-font-size: 24px;
-    -fx-background-color: indianred;
-    -fx-font-family: "Andalus";
-}
-
-.dialog > .dialog-pane > .content.label {
-    -fx-font-size: 16px;
-    -fx-font-weight: bold;
-    -fx-fill: blue;
-}
-
-.dialog:header > .dialog-pane .header-panel {
-    -fx-background-color: cadetblue;
-    -fx-font-style: italic;
-}
-*/

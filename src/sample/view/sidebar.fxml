@@ -15,7 +15,7 @@
       <StackPane fx:id="contentArea" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <AnchorPane fx:id="anchorPane" prefHeight="550.0" prefWidth="245.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-200.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane fx:id="anchorPane2" layoutX="30.0" layoutY="14.0" prefHeight="550.0" prefWidth="200.0" styleClass="sidebar-background" stylesheets="@../css/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane fx:id="anchorPane2" layoutX="30.0" layoutY="14.0" prefHeight="550.0" prefWidth="200.0" styleClass="sidebar-drop-shadow" stylesheets="@../css/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <VBox layoutX="46.0" layoutY="81.0" prefHeight="330.0" prefWidth="200.0" AnchorPane.bottomAnchor="220.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
@@ -37,7 +37,7 @@
                               </AnchorPane>
                            </graphic>
                         </Button>
-                        <Button fx:id="sbutton2" mnemonicParsing="false" prefHeight="45.0" prefWidth="245.0" styleClass="sidebar-button" stylesheets="@../css/style.css">
+                        <Button fx:id="sbutton2" mnemonicParsing="false" onMouseClicked="#repository" prefHeight="45.0" prefWidth="245.0" styleClass="sidebar-button" stylesheets="@../css/style.css">
                            <graphic>
                               <AnchorPane prefHeight="200.0" prefWidth="200.0">
                                  <children>
@@ -109,7 +109,7 @@
                               </AnchorPane>
                            </graphic>
                         </Button>
-                        <Button fx:id="sbutton6" mnemonicParsing="false" prefHeight="45.0" prefWidth="245.0" styleClass="sidebar-button" stylesheets="@../css/style.css">
+                        <Button fx:id="sbutton6" mnemonicParsing="false" onMouseClicked="#settings" prefHeight="45.0" prefWidth="245.0" styleClass="sidebar-button" stylesheets="@../css/style.css">
                            <graphic>
                               <AnchorPane prefHeight="200.0" prefWidth="200.0">
                                  <children>
