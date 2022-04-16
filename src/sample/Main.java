@@ -7,9 +7,11 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-
+import sample.serverClient.*;
+import java.io.IOException;
+import java.net.Socket;
 public class Main extends Application {
-
+    static public Client client;
     @Override
     public void start(Stage primaryStage) throws Exception{
 
@@ -27,7 +29,9 @@ public class Main extends Application {
         primaryStage.setMinWidth(primaryStage.getWidth());
         primaryStage.setMinHeight(primaryStage.getHeight());
     }
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        Socket socket=new Socket("localhost" ,1235);
+        client = new Client(socket);
         launch(args);
     }
 }
